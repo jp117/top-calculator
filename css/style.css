@@ -1,0 +1,34 @@
+.calculator {
+  width: 200px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  height: 50px;
+}
+
+#clear {
+  flex: 4;
+}
+
+#divide,
+#multiply,
+#add,
+#subtract,
+#decimal,
+#equals{
+  flex: 1;
+}
+
+.number {
+  flex: 1;
+}
+
+.largerNumber {
+  flex: 2.5;
+}
+
+.display {
+  align-items: right;
+}
