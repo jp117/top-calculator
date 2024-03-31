@@ -30,5 +30,8 @@
 }
 
 .display {
-  align-items: right;
+  text-align: right;
+  align-self: flex-end;
+  flex-grow: 1;
+  font-size: 25px;
 }
