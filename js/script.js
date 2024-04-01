@@ -1,4 +1,12 @@
-let firstNumber, operator, secondNumber;
+let first, operator, second;
+
+let numbers = document.querySelectorAll('.number');
+console.log(numbers);
+numbers.forEach(function(current){
+  current.addEventListener('click', function(){
+    console.log(current.innerText);
+  } );
+})
 
 function calculate(firstNumber, operator, secondNumber){
   switch(operator){
@@ -24,3 +32,4 @@ function multiply(one, two){
 function divide(one, two){
   return one / two;
 }
+
