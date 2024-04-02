@@ -2,6 +2,16 @@ let first, operator, second;
 let displayNumber = "";
 let display = document.querySelectorAll('.display');
 
+let clear = document.getElementById("clear");
+clear.addEventListener('click', function(){
+  displayNumber = "";
+  first = 0;
+  second = 0;
+  operator = "";
+  display[0].innerText = displayNumber;
+})
+
+
 let numbers = document.querySelectorAll('.number');
 numbers.forEach(function(current){
   current.addEventListener('click', function(){
