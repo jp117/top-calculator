@@ -11,13 +11,38 @@ clear.addEventListener('click', function(){
   display[0].innerText = displayNumber;
 })
 
-
 let numbers = document.querySelectorAll('.number');
 numbers.forEach(function(current){
   current.addEventListener('click', function(){
     displayNumber = displayNumber += current.innerText;
     display[0].innerText = displayNumber;
   } );
+})
+
+let addButton = document.getElementById("add");
+addButton.addEventListener('click', function(){
+  operator = "add";
+})
+
+let divideButton = document.getElementById("divide");
+divideButton.addEventListener('click' function(){
+  operator = 'divide';
+})
+
+let multiplyButton = document.getElementById("multiply");
+multiplyButton.addEventListener('click', function(){
+  operator = 'multiply';
+})
+
+let subtractButton = document.getElementById("divide");
+subtractButton.addEventListener('click', function(){
+  operator = "subtract";
+})
+
+let equalsButton = document.getElementById("equals");
+equalsButton.addEventListener('click' function(){
+  displayNumber = calculate(firstNumber, operator, secondNumber);
+  display[0].innerText = displayNumber;
 })
 
 function calculate(firstNumber, operator, secondNumber){
