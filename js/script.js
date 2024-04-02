@@ -1,10 +1,12 @@
 let first, operator, second;
+let displayNumber = "";
+let display = document.querySelectorAll('.display');
 
 let numbers = document.querySelectorAll('.number');
-console.log(numbers);
 numbers.forEach(function(current){
   current.addEventListener('click', function(){
-    console.log(current.innerText);
+    displayNumber = displayNumber += current.innerText;
+    display[0].innerText = displayNumber;
   } );
 })
 
