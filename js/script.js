@@ -14,8 +14,12 @@ clear.addEventListener('click', function(){
 let numbers = document.querySelectorAll('.number');
 numbers.forEach(function(current){
   current.addEventListener('click', function(){
-    displayNumber = displayNumber += current.innerText;
-    display[0].innerText = displayNumber;
+    if (displayNumber == "" && current.innerText == "0"){
+
+    } else {
+      displayNumber = displayNumber += current.innerText;
+      display[0].innerText = displayNumber;
+    }
   } );
 })
 
@@ -25,7 +29,7 @@ addButton.addEventListener('click', function(){
 })
 
 let divideButton = document.getElementById("divide");
-divideButton.addEventListener('click' function(){
+divideButton.addEventListener('click', function(){
   operator = 'divide';
 })
 
@@ -40,7 +44,7 @@ subtractButton.addEventListener('click', function(){
 })
 
 let equalsButton = document.getElementById("equals");
-equalsButton.addEventListener('click' function(){
+equalsButton.addEventListener('click', function(){
   displayNumber = calculate(firstNumber, operator, secondNumber);
   display[0].innerText = displayNumber;
 })
